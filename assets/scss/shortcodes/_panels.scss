@@ -1,0 +1,27 @@
+//===========================================================
+
+// Minovate - shortcodes/panels.scss
+
+//===========================================================
+
+.panel {
+  &.panel-faq {
+    border-radius: 0;
+    box-shadow: none;
+
+    .panel-title {
+      >a:not(.collapsed) {
+        color: $theme-color;
+      }
+    }
+
+    .panel-collapse {
+      &.in,
+      &.collapsing {
+        .panel-body {
+          border-color: $theme-color;
+        }
+      }
+    }
+  }
+}

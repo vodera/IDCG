@@ -1,0 +1,145 @@
+//===========================================================
+
+// Minovate - shortcodes/form-elements.scss
+
+//===========================================================
+
+.form-control {
+  color: $font-color;
+  outline: 0;
+  vertical-align: top;
+  background-color: #fff;
+  filter: none !important;
+  @include box-shadow(none);
+  border-radius: 2px;
+  border: 1px solid $bright-default;
+  height: 38px;
+  @include transition(all .2s linear);
+
+  &:not(select) {
+    -webkit-appearance: none !important;
+  }
+
+  @include placeholder {
+    @include transition(color .2s linear);
+    color: $font-color-30;
+    font-style: italic;
+    font-size: $font-size-sm;
+    line-height: 20px;
+  }
+
+  &.input-lg {
+    @include placeholder {
+      font-size: $font-size-lg;
+    }
+  }
+
+  &.input-sm {
+    @include placeholder {
+      line-height: 18px;
+    }
+  }
+
+  &:hover:not(:disabled) {
+    border-color: darken($bright-default, 15%);
+  }
+
+  &:focus,
+  &:focus:hover {
+    outline: none;
+    border: 1px solid;
+    border-color: $theme-color;
+    @include box-shadow(none);
+  }
+
+  &.rounded {
+    border-radius: 600px;
+  }
+
+  &.input-unstyled {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    @include placeholder {
+      font-size: 16px;
+    }
+
+    &:focus,
+    &:focus:hover {
+      border: 0;
+    }
+  }
+
+  &.input-3d {
+    border-bottom: 3px solid $bright-default;
+
+    &:focus,
+    &:focus:hover {
+      border-bottom: 3px solid $theme-color;
+    }
+  }
+
+  &.unhappy {
+    border-color: $lightred;
+  }
+}
+
+.input-group {
+  &.input-group-3d {
+    .form-control {
+      border-right: 0!important;
+
+      &:hover {
+        +.input-group-btn {
+          button {
+            border-color: darken($bright-default, 15%);
+          }
+        }
+      }
+      &:focus,
+      &:focus:hover {
+        +.input-group-btn {
+          button {
+            border-bottom: 3px solid $theme-color;
+          }
+        }
+      }
+    }
+    button {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      margin: 0;
+      height: 38px;
+      line-height: 35px;
+      border-bottom: 3px solid $bright-default;
+    }
+  }
+}
+
+.form-group {
+  >label {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-family: $font-raleway;
+  }
+}
+
+form .unhappyMessage {
+  color: $lightred;
+  font-size: $font-size-sm;
+  font-style: italic;
+}
+
+//myInput
+
+.form-control {
+  &.myInput {
+    border-width: 2px;
+    &:not(textarea) {
+      height: 46px;
+    }
+    &:focus {
+      border-width: 2px;
+    }
+  }
+}

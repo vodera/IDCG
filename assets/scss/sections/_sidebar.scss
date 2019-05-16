@@ -1,0 +1,40 @@
+//===========================================================
+
+// Minovate - sections/sidebar.scss
+
+//===========================================================
+
+.sidebar {
+  >.widget-heading {
+    margin-bottom: 10px;
+  }
+  .sidebar-widget {
+    margin-bottom: 40px;
+
+    &.nav {
+      >li {
+        border-left: 2px solid #f8f8f8;
+        >a {
+          border-radius: 2px;
+          &:hover {
+            background-color: #f8f8f8;
+          }
+        }
+      }
+    }
+
+    &.media-list {
+      .media {
+        .media-object {
+          width: 64px;
+          border-radius: 2px;
+        }
+        .media-body {
+          p {
+            font-size: $font-size-sm;
+          }
+        }
+      }
+    }
+  }
+}
